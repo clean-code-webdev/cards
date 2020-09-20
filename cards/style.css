@@ -1,0 +1,193 @@
+/* --- Google Fonts --- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* --- container --- */
+#bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#2f2f2f), to(#404040));
+  background: linear-gradient(to right, #2f2f2f, #404040);
+}
+
+#bg .bg-1 {
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+          clip-path: polygon(0 0, 0% 100%, 100% 0);
+  width: 100%;
+  height: calc(100vh / 3);
+  background: -webkit-gradient(linear, left top, right top, from(#7b7b7b), to(#9e9e9e));
+  background: linear-gradient(to right, #7b7b7b, #9e9e9e);
+}
+
+#bg .bg-3 {
+  -webkit-clip-path: polygon(0 100%, 100% 99%, 100% 0);
+          clip-path: polygon(0 100%, 100% 99%, 100% 0);
+  width: 100%;
+  height: calc(100vh / 3);
+  background: -webkit-gradient(linear, left top, right top, from(#7b7b7b), to(#9e9e9e));
+  background: linear-gradient(to right, #7b7b7b, #9e9e9e);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#wrapper {
+  width: 90vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 5rem;
+  margin: 5rem auto;
+}
+
+#wrapper .card {
+  width: 100%;
+  height: calc(90vw / 1.92);
+  position: relative;
+  background: #fe9413;
+  -webkit-box-shadow: 0.7rem 0.7rem 1rem #c4c4c4;
+          box-shadow: 0.7rem 0.7rem 1rem #c4c4c4;
+}
+
+#wrapper .card h2.project-name {
+  color: white;
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  width: 45%;
+  padding: 0 2rem;
+}
+
+#wrapper .card h2.project-name:nth-last-of-type(2) {
+  top: 10rem;
+  display: none;
+}
+
+#wrapper .card p {
+  font-size: 1.8rem;
+  color: white;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 40%;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#wrapper .card p span:hover {
+  cursor: pointer;
+}
+
+#wrapper .card p span a {
+  text-decoration: none;
+  color: white;
+}
+
+#wrapper .card .left-bg {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 5rem 5rem 0;
+  background: -webkit-gradient(linear, left top, right top, from(#202020), to(#303030));
+  background: linear-gradient(to right, #202020, #303030);
+}
+
+#wrapper .card .container {
+  -webkit-filter: drop-shadow(-3rem 0 1rem black);
+          filter: drop-shadow(-3rem 0 1rem black);
+  width: calc(90vw / 2 - 1rem);
+  height: calc(90vw / 2 - 1rem);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#wrapper .card .container a .img {
+  width: 100%;
+  height: 100%;
+  background: #202020;
+  -webkit-box-shadow: -0.3rem -0.3rem 2rem yellow;
+          box-shadow: -0.3rem -0.3rem 2rem yellow;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+#wrapper .card .container a .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #wrapper .card {
+    width: 100%;
+    height: calc(95vw / 3.85);
+  }
+  #wrapper .card .container {
+    width: calc(95vw / 4 - 1rem);
+    height: calc(95vw / 4 - 1rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #wrapper {
+    width: 90rem;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #wrapper .card {
+    width: 45rem;
+    height: 23.4rem;
+  }
+  #wrapper .card h2.project-name {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  #wrapper .card .container {
+    width: 21.6rem;
+    height: 21.6rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
